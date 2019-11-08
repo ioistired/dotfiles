@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+set here (dirname (realpath (status filename)))
+set dotfiles $here/dotfiles
+ln -sf $dotfiles/config.fish ~/.config/fish/
+rmdir ~/.config/fish/functions ^/dev/null
+ln -sf $dotfiles/functions ~/.config/fish/ ^/dev/null
+ln -sf $dotfiles/nanorc ~/.nanorc

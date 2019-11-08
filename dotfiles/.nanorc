@@ -1,0 +1,81 @@
+set nonewlines
+set smarthome
+set tabsize 4
+set suspend
+set nowrap
+set autoindent
+set nohelp
+set historylog
+set positionlog
+
+unbind ^J main
+
+syntax python "\.py$"
+header "^#!.*python"
+magic "Python script"
+comment "#"
+
+# Single-quoted strings.
+#color brightgreen "'([^'\]|\\.)*'"
+#color brightgreen ""([^"\]|\\.)*""
+# Comments.
+color brightred "(^|[[:blank:]])#.*"
+# Triple-quoted strings.
+# disabled because they messed up tokenize.py
+#color brightgreen    start="'''" end="'''"
+#color brightgreen start="\"\"\"" end="\"\"\""
+
+# Reminders.
+color brightwhite,yellow "(FIXME|TODO|XXX)"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"
+
+
+syntax sql "\.sql[2345s~]?$"
+comment "-- "
+color brightred "--[^{].*" "--$"
+
+
+syntax javascript "\.js$"
+comment "//"
+
+# Strings.
+#color brightmagenta ""(\\.|[^"])*"" "'(\\.|[^'])*'" "`(\\.|[^`])*`"
+color brightgreen start="`([^`]|$)" end="(^|[^`])`"
+# Comments.
+color brightred "(^|[[:space:]])//.*"
+color brightred start="/\*" end="\*/"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"
+
+syntax html "\.html?$"
+magic "HTML document"
+comment "<!--|-->"
+
+# Comments:
+color brightred start="<!--" end="-->"
+
+syntax xml "\.([jrsx]html?|jnlp|mml|pom|rng|sgml?|svg|w[as]dl|wsdd|xjb|xml|xs(d|lt?)|xul)$"
+header "<\?xml.*version=.*\?>"
+magic "(XML|SGML) (sub)?document"
+comment "<!--|-->"
+
+# Comments:
+color brightred start="<!DOCTYPE" end="[/]?>"
+color brightred start="<!--" end="-->"
+
+syntax c "\.([ch](pp|xx)?|C|cc|c\+\+|cu|H|hh|ii?)$"
+magic "^(C|C\+\+) (source|program)"
+comment "//"
+
+# Comments.
+color brightred "//.*"
+color brightred start="/\*" end="\*/"
+
+# Reminders.
+color brightwhite,yellow "\<(FIXME|TODO|XXX)\>"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"
