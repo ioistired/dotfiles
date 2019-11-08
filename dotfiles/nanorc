@@ -7,6 +7,7 @@ set autoindent
 set nohelp
 set historylog
 set positionlog
+set zap
 
 unbind ^J main
 
@@ -34,8 +35,11 @@ color ,green "[[:space:]]+$"
 
 syntax sql "\.sql[2345s~]?$"
 comment "-- "
-color brightred "--[^{].*" "--$"
-
+color brightred "--.*"
+# jinja commands
+color yellow "-- :.*"
+color yellow start="\{\{" end="\}\}"
+color yellow start="\{%" end="%\}"
 
 syntax javascript "\.js$"
 comment "//"
