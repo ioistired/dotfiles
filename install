@@ -8,3 +8,4 @@ ln -sf $dotfiles/functions ~/.config/fish/
 ln -sf $dotfiles/nanorc ~/.nanorc
 ln -sf $dotfiles/sitecustomize.py ~/.local/lib/python3.7/
 ln -sf $dotfiles/sitecustomize.py ~/.local/lib/python3.8/
+ln -sf $dotfiles/discord-custom.css ~/.config/discord/*.*.*/modules/discord_desktop_core/discord-custom.css
