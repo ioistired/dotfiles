@@ -16,6 +16,7 @@ set -x FFSEND_FORCE
 source ~/.config/fish/keys.fish
 
 set -x fish_prompt_git_status_deleted 𝙭
+set -x fish_prompt_pwd_dir_length 0  # don't abbreviate cwd in prompt
 
 # why it uses ~/.local/pipx by default is beyond me
 set -x PIPX_HOME ~/.local/share/pipx
