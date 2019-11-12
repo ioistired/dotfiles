@@ -6,6 +6,8 @@ ln -sf $dotfiles/config.fish ~/.config/fish/
 rm -r ~/.config/fish/functions
 ln -sf $dotfiles/functions ~/.config/fish/
 ln -sf $dotfiles/nanorc ~/.nanorc
+type -q python3.7; and mkdir -p ~/.local/lib/python3.7/site-packages/
 ln -sf $dotfiles/sitecustomize.py ~/.local/lib/python3.7/site-packages/
+type -q python3.8; and mkdir -p ~/.local/lib/python3.8/site-packages/
 ln -sf $dotfiles/sitecustomize.py ~/.local/lib/python3.8/site-packages/
 ln -sf $dotfiles/discord-custom.css ~/.config/discord/*.*.*/modules/discord_desktop_core/discord-custom.css
