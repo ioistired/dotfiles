@@ -16,15 +16,15 @@ header "^#!.*python"
 magic "Python script"
 comment "#"
 
+# Single-quoted strings.
+#color brightgreen "'([^'\]|\\.)*'"
+#color brightgreen ""([^"\]|\\.)*""
 # Comments.
 color brightred "(^|[[:blank:]])#.*"
-# Single-quoted strings.
-# These are set to the normal color so that "comments" inside strings are not highlighted
-color normal "'([^'\]|\\.)*'"
-color normal ""([^"\]|\\.)*""
 # Triple-quoted strings.
-color normal start="'''" end="'''"
-color normal start="\"\"\"" end="\"\"\""
+# disabled because they messed up tokenize.py
+#color brightgreen    start="'''" end="'''"
+#color brightgreen start="\"\"\"" end="\"\"\""
 
 # Reminders.
 color brightwhite,yellow "(FIXME|TODO|XXX)"
