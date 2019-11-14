@@ -25,4 +25,10 @@ for f in ~/.config/fish/functions.local/*.fish
 	source $f
 end
 
+if test (uname -o) = 'Android'
+	alias df 'df -H'
+else
+	alias df 'df --si'
+end
+
 source ~/.config/fish/config.local.fish
