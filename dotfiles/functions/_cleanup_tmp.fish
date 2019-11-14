@@ -14,7 +14,7 @@ function _cleanup_tmp --on-event fish_postexec
 		if type -q deactivate
 			deactivate
 		end
-		rm -r $_current_tmp_dir
+		rm -rf $_current_tmp_dir
 		set -e _current_tmp_dir
 	end
 	cd $old_cwd
