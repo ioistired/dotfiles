@@ -4,7 +4,3 @@
 /*.hljs-string { color: hsl(175, 59%, 40%) !important; }*/
 .hljs-deletion { color: #dc322f !important; }
 .hljs-addition { color: #859900 !important; }
-.emoji.jumboable {
-	width: 3rem;
-	height: 3rem;
-	min-height: 3rem;}
