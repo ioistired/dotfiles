@@ -1,0 +1,6 @@
+*.swp
+*.save
+.venv*/
+venv*/
+# pyenv
+.python-version

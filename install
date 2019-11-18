@@ -17,3 +17,6 @@ for py_version in 3.7 3.8
 end
 
 ln -sf $dotfiles/discord-custom.css ~/.config/discord/*.*.*/modules/discord_desktop_core/discord-custom.css
+
+ln -sf $dotfiles/gitignore ~/.gitignore
+git config --global core.excludesFile ~/.gitignore
