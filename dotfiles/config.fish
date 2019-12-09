@@ -13,6 +13,8 @@ set -x PIJUL_CONFIG_DIR ~/.config/pijul
 set -x FFSEND_HOST https://send.lambda.dance
 set -x FFSEND_FORCE
 
+set -x DOTNET_CLI_TELEMETRY_OPTOUT 1
+
 source ~/.config/fish/keys.fish
 
 set -x fish_prompt_git_status_deleted 𝙭
