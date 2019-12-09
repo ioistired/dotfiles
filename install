@@ -19,5 +19,14 @@ end
 # make sure to install BeautifulDiscord using `beautifuldiscord --css ~/.config/discord/discord-custom.css`.
 ln -sf $dotfiles/discord-custom.css ~/.config/discord/discord-custom.css
 
-ln -sf $dotfiles/gitignore ~/.gitignore
-git config --global core.excludesFile ~/.gitignore
+if set -q XDG_CONFIG_HOME && test -n $XDG_CONFIG_HOME
+	set config_home $XDG_CONFIG_HOME
+else
+	set config_home ~/.config
+end
+
+# we were previously using ~/.gitignore, now let's use the default
+git config --global --unset core.excludesFile
+
+mkdir -p $config_home/.git/
+ln -sf $dotfiles/gitignore $config_home/.git/ignore
