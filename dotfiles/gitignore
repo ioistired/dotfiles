@@ -1,7 +1,13 @@
+# nano
 *.swp
 *.save
+
 .venv*/
 venv*/
+
+.mypy_cache/
+
 # pyenv
 .python-version
+
 .idea
