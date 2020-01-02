@@ -1,6 +1,6 @@
 # Defined in /tmp/fish.O3zwfi/parse-vcs-path.fish @ line 2
 function parse-vcs-path --description 'echo the path given by remote' --argument vcs remote
-	set remote	(echo $remote | sed 's|.git$||' | sed -E 's|^https?://||')
+	set remote	(echo $remote | sed -E -e 's$^(https|git)?://$$' -e 's|.git$||')
 	set parts	(string split -m 1 '/' $remote)  # split on the first / to get the host and path
 	set host	$parts[1]
 
