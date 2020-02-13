@@ -5,7 +5,10 @@ set -x DISPLAY :0
 set -x EDITOR nano
 
 # set tab width
-tabs -4
+if status --is-interactive
+	tabs -4
+end
+
 set -x PAGER less -x 4
 
 set -x PIJUL_CONFIG_DIR ~/.config/pijul
