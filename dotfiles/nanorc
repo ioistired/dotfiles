@@ -8,7 +8,6 @@ set nohelp
 set historylog
 set positionlog
 set zap
-set guidestripe 120
 
 unbind ^J main
 
