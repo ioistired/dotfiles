@@ -1,13 +1,23 @@
 #!/usr/bin/env fish
 
+if set -q XDG_CONFIG_HOME && test -n $XDG_CONFIG_HOME
+	set config_home $XDG_CONFIG_HOME
+else
+	set config_home ~/.config
+end
+
 set here (dirname (realpath (status filename)))
 set dotfiles $here/dotfiles
 
-ln -sf $dotfiles/config.fish ~/.config/fish/
-rm -r ~/.config/fish/functions
-ln -sf $dotfiles/functions ~/.config/fish/
+ln -sf $dotfiles/config.fish $config_home/fish/
+rm -r $config_home/fish/functions
+ln -sf $dotfiles/functions $config_home/fish/
 
-ln -sf $dotfiles/nanorc ~/.nanorc
+# legacy path
+unlink ~/.nanorc
+
+mkdir -p $config_home/nano
+ln -sf $dotfiles/nanorc $config_home/nano/nanorc
 
 for py_version in 3.7 3.8
 	if type -q python$py_version
@@ -19,14 +29,8 @@ end
 # make sure to install BeautifulDiscord using `beautifuldiscord --css ~/.config/discord/discord-custom.css`.
 ln -sf $dotfiles/discord-custom.css ~/.config/discord/discord-custom.css
 
-if set -q XDG_CONFIG_HOME && test -n $XDG_CONFIG_HOME
-	set config_home $XDG_CONFIG_HOME
-else
-	set config_home ~/.config
-end
-
 # we were previously using ~/.gitignore, now let's use the default
 git config --global --unset core.excludesFile
 
-mkdir -p $config_home/.git/
-ln -sf $dotfiles/gitignore $config_home/.git/ignore
+mkdir -p $config_home/git/
+ln -sf $dotfiles/gitignore $config_home/git/ignore
