@@ -12,6 +12,7 @@ end
 set -x PAGER less -x 4
 
 set -x PIJUL_CONFIG_DIR ~/.config/pijul
+set -x NVM_DIR ~/.local/share/nvm
 
 set -x FFSEND_HOST https://send.lambda.dance
 set -x FFSEND_FORCE
