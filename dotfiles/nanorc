@@ -11,6 +11,7 @@ set zap
 
 unbind ^J main
 
+
 # syntax (un)highlighting
 
 syntax python "\.py$"
@@ -116,3 +117,9 @@ color brightred start="/\*" end="\*/"
 
 # Trailing whitespace.
 color ,green "[[:space:]]+$"
+
+
+syntax css "\.css$"
+comment "/*|*/"
+
+color brightred    start="\/\*" end="\*/"
