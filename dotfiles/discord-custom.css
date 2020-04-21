@@ -1,8 +1,12 @@
 * { tab-size: 4 !important; }
+
+span[class*="blockedAction"] { display: none; }
+
+button[aria-label="Send a gift"] { display: none; }
+button[aria-label="Open GIF picker"] { display: none; }
+
 [class*="hljs-"] { color: inherit !important; }
 .hljs-comment { color: hsl(18, 80%, 44%) !important; }
 /*.hljs-string { color: hsl(175, 59%, 40%) !important; }*/
 .hljs-deletion { color: #dc322f !important; }
 .hljs-addition { color: #859900 !important; }
-button[aria-label="Send a gift"] { display: none; }
-button[aria-label="Open GIF picker"] { display: none; }
