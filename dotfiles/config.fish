@@ -1,6 +1,11 @@
 set -x PATH ~/.local/bin $PATH
 set -x PATH ~/.cargo/bin $PATH
 
+if type -q go
+	set -x GOPATH ~/code/language/go
+	set -x PATH $GOPATH/bin $PATH
+end
+
 set -x DISPLAY :0
 set -x EDITOR nano
 
