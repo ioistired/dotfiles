@@ -1,6 +1,6 @@
 * { tab-size: 4 !important; }
 
-span[class*="blockedAction"] { display: none; }
+span[class*="blockedAction-"] { display: none; }
 
 button[aria-label="Send a gift"] { display: none; }
 button[aria-label="Open GIF picker"] { display: none; }
