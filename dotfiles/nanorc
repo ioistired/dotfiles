@@ -1,3 +1,4 @@
+set multibuffer
 set nonewlines
 set smarthome
 set tabsize 4
