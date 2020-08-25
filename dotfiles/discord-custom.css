@@ -3,6 +3,7 @@
 button[aria-label="Send a gift"] { display: none; }
 button[aria-label="Open GIF picker"] { display: none; }
 
+/* disable syntax highlighting, except for comments and diffs */
 [class*="hljs-"] { color: inherit !important; }
 .hljs-comment { color: hsl(18, 80%, 44%) !important; }
 /*.hljs-string { color: hsl(175, 59%, 40%) !important; }*/
