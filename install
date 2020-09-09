@@ -9,6 +9,10 @@ end
 set here (dirname (realpath (status filename)))
 set dotfiles $here/dotfiles
 
+if not contains $here/bin $fish_user_paths
+	set --prepend --universal fish_user_paths $here/bin
+end
+
 ln -sf $dotfiles/config.fish $config_home/fish/
 rm -r $config_home/fish/functions
 ln -sf $dotfiles/functions $config_home/fish/

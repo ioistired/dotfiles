@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+echo '[sudo]' "$@" >&2
+/usr/bin/sudo "$@"
+last=$?
+echo '[sudo] end' "$@" >&2
+exit $last
