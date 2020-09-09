@@ -14,7 +14,7 @@ rm -r $config_home/fish/functions
 ln -sf $dotfiles/functions $config_home/fish/
 
 # legacy path
-unlink ~/.nanorc
+unlink ~/.nanorc 2>/dev/null || true
 
 mkdir -p $config_home/nano
 ln -sf $dotfiles/nanorc $config_home/nano/nanorc
