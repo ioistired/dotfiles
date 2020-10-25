@@ -24,6 +24,9 @@ set -x FFSEND_FORCE
 
 set -x DOTNET_CLI_TELEMETRY_OPTOUT 1
 
+# i don't really use pipenv, so suppress the messages warning that pipenv is being used in a virtualenv
+set -x PIPENV_VERBOSITY -1
+
 source ~/.config/fish/keys.fish
 
 set -x fish_prompt_git_status_deleted 𝙭
