@@ -22,6 +22,7 @@ unlink ~/.nanorc 2>/dev/null || true
 
 mkdir -p $config_home/nano
 ln -sf $dotfiles/nanorc $config_home/nano/nanorc
+ln -sf $dotfiles/ghci ~/.ghci
 
 for py_version in 3.7 3.8
 	if type -q python$py_version
