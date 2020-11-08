@@ -14,3 +14,6 @@ class[*="username-"] { font-weight: 450; }
 /*.hljs-string { color: hsl(175, 59%, 40%) !important; }*/
 .hljs-deletion { color: #dc322f !important; }
 .hljs-addition { color: #859900 !important; }
+
+/* hide :qwas: */
+img[src*="https://cdn.discordapp.com/emojis/768984319112511538.png"] { display:none; }
