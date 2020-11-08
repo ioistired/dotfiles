@@ -1,7 +1,12 @@
 * { tab-size: 4 !important; }
 
-button[aria-label="Send a gift"] { display: none; }
-button[aria-label="Open GIF picker"] { display: none; }
+button[aria-label="Send a gift"],
+button[aria-label="Open GIF picker"],
+button[aria-label="Open sticker picker"] {
+	display: none;
+}
+
+class[*="username-"] { font-weight: 450; }
 
 /* disable syntax highlighting, except for comments and diffs */
 [class*="hljs-"] { color: inherit !important; }
