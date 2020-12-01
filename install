@@ -24,7 +24,7 @@ mkdir -p $config_home/nano
 ln -sf $dotfiles/nanorc $config_home/nano/nanorc
 ln -sf $dotfiles/ghci ~/.ghci
 
-for py_version in 3.7 3.8
+for py_version in 3.7 3.8 3.9
 	if type -q python$py_version
 		mkdir -p ~/.local/lib/python$py_version/site-packages/
 		ln -sf $dotfiles/sitecustomize.py ~/.local/lib/python$py_version/site-packages/
