@@ -1,9 +1,9 @@
-# Defined in /tmp/fish.I8m6yk/venv.fish @ line 2
+# Defined in /tmp/fish.oBzqqP/venv.fish @ line 2
 function venv --argument dir
 	test -z $dir; and set -l dir .venv
 	if test ! -d $dir
 		# don't base our new venv off of an existing one
-		test -n $VIRTUAL_ENV; and deactivate
+		functions -q deactivate; and deactivate
 
 		set -l user_site_dir (python -m site --user-site)
 		python -m venv $dir
