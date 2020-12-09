@@ -9,6 +9,8 @@ set nohelp
 set historylog
 set positionlog
 set zap
+set stateflags
+set atblanks
 
 unbind ^J main
 
