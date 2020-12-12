@@ -39,3 +39,9 @@ git config --global --unset core.excludesFile
 
 mkdir -p $config_home/git/
 ln -sf $dotfiles/gitignore $config_home/git/ignore
+
+# X11 stuff
+# this expects that your ~/.xinitrc will source every file in $config_home/xinit/xinitrc.d
+# TODO get XCompose to use a custom path
+ln -sf $dotfiles/x/xcompose ~/.XCompose
+ln -sf $dotfiles/x $config_home/xinit
