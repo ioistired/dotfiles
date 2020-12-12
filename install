@@ -31,8 +31,8 @@ for py_version in 3.7 3.8 3.9
 	end
 end
 
-# make sure to install BeautifulDiscord using `beautifuldiscord --css ~/.config/discord/discord-custom.css`.
-ln -sf $dotfiles/discord-custom.css ~/.config/discord/discord-custom.css
+ln -sf $dotfiles/discord-custom.css $config_home/discord/discord-custom.css
+command -q beautifuldiscord; and beautifuldiscord --css $config_home/discord/discord-custom.css >/dev/null 2>&1
 
 # we were previously using ~/.gitignore, now let's use the default
 git config --global --unset core.excludesFile
