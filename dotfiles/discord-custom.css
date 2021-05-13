@@ -6,8 +6,6 @@ button[aria-label="Open sticker picker"] {
 	display: none;
 }
 
-class[*="username-"] { font-weight: 450; }
-
 /* disable syntax highlighting, except for comments and diffs */
 [class*="hljs-"] { color: inherit !important; }
 .hljs-comment { color: hsl(18, 80%, 44%) !important; }
