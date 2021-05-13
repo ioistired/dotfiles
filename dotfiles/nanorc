@@ -3,6 +3,7 @@ set nonewlines
 set smarthome
 set tabsize 4
 set suspend
+set suspendable
 set nowrap
 set autoindent
 set nohelp
@@ -11,6 +12,7 @@ set positionlog
 set zap
 set stateflags
 set atblanks
+set minibar
 
 unbind ^J main
 
