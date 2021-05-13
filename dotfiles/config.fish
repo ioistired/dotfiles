@@ -1,3 +1,5 @@
+umask 0027  # u=rwx,g=rx,o=
+
 set -x PATH ~/.local/bin $PATH
 set -x PATH ~/.cargo/bin $PATH
 
