@@ -44,4 +44,6 @@ ln -sf $dotfiles/gitignore $config_home/git/ignore
 # this expects that your ~/.xinitrc will source every file in $config_home/xinit/xinitrc.d
 # TODO get XCompose to use a custom path
 ln -sf $dotfiles/x/xcompose ~/.XCompose
-ln -sf $dotfiles/x $config_home/xinit
+if not test -d $config_home/xinit
+	ln -sf $dotfiles/x $config_home/xinit
+end
