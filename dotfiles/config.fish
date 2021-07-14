@@ -1,7 +1,19 @@
 umask 0027  # u=rwx,g=rx,o=
 
 set -x PATH ~/.local/bin $PATH
-set -x PATH ~/.cargo/bin $PATH
+
+set -x CARGO_HOME $HOME/.local/share/cargo
+set -x PATH $CARGO_HOME/bin $PATH
+
+set -x ASDF_DATA_DIR $HOME/.local/share/asdf
+
+if type -q pyenv
+	set -x PYENV_ROOT $HOME/.local/share/pyenv
+	fish_add_path $PYENV_ROOT/bin
+
+	status is-login && pyenv init --path | source
+	pyenv init - | source
+end
 
 if type -q go
 	set -x GOPATH ~/code/language/go
