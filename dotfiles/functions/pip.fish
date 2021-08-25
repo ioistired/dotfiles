@@ -1,5 +1,5 @@
-function pip --argument command
-	if test "x$command" = xisntall
+function pip
+	if test "$argv[1]" = isntall
 		sl
 		return 1
 	end
