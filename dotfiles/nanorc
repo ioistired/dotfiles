@@ -144,3 +144,23 @@ syntax css "\.css$"
 comment "/*|*/"
 
 color brightred    start="\/\*" end="\*/"
+
+
+## Syntax highlighting for Rust.
+
+## Copyright 2015 Luke Francl.
+## Licensed under GPL version 3.
+
+syntax rust "\.(rlib|rs)$"
+comment "//"
+
+# Strings
+# Disabled because `actix_web::HttpResponse::Ok().header("Content-Type", "text/plain").body("Hello world!")`
+# fails to properly highlight
+
+# Comments
+color brightred "//.*"
+color blue start="/\*" end="\*/"
+
+# Reminders
+color brightwhite,yellow "XXX|TODO|FIXME"
