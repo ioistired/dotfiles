@@ -1,6 +1,6 @@
-# Defined in /tmp/fish.uoksJ1/venv.fish @ line 2
 function venv --argument dir
-	test -z $dir; and set -l dir ~/.local/share/venvs/(pwd)
+	# @ sign is to allow venvs in parent directories and subdirectories
+	test -z $dir; and set dir ~/.local/share/venvs/(dirname (pwd))/@(basename (pwd))
 	if test ! -d $dir
 		# don't base our new venv off of an existing one
 		functions -q deactivate; and deactivate
