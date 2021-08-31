@@ -2,8 +2,10 @@
 *.swp
 *.save
 
+# python
 .venv*/
 venv*/
+__pycache__/
 
 .mypy_cache/
 
