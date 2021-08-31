@@ -13,6 +13,7 @@ set zap
 set stateflags
 set atblanks
 set minibar
+set indicator
 
 unbind ^J main
 
