@@ -39,6 +39,8 @@ set -x FFSEND_FORCE
 
 set -x DOTNET_CLI_TELEMETRY_OPTOUT 1
 
+set -x NO_COLOR
+
 # i don't really use pipenv, so suppress the messages warning that pipenv is being used in a virtualenv
 set -x PIPENV_VERBOSITY -1
 
