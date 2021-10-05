@@ -1,3 +1,3 @@
 function ttm
-	curl -F file=@- https://ttm.sh
+	curl -F file=@- https://ttm.sh $argv
 end
