@@ -161,7 +161,7 @@ comment "//"
 
 # Comments
 color brightred "//.*"
-color blue start="/\*" end="\*/"
+color brightred start="/\*" end="\*/"
 
 # Reminders
 color brightwhite,yellow "XXX|TODO|FIXME"
