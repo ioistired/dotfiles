@@ -9,7 +9,11 @@ __pycache__/
 
 .mypy_cache/
 
-# pyenv
+## pyenv
 .python-version
 
 .idea
+
+# go
+go.mod
+go.sum
