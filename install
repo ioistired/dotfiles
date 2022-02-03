@@ -47,15 +47,3 @@ ln -sf $dotfiles/x/xcompose ~/.XCompose
 if not test -d $config_home/xinit
 	ln -sf $dotfiles/x $config_home/xinit
 end
-
-rsync -r dotfiles/deemix $config_home
-
-if test (uname -o) = 'Android'
-	set music_home ~/storage/shared/Music
-else
-	set music_home ~/Music
-end
-
-# assume that JSON quoting rules are roughly equivalent to fish quoting rules
-set music_home (string escape $music_home)
-sed -i "s|MUSIC_HOME|$music_home|" $config_home/deemix/config.json
