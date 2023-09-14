@@ -2,7 +2,6 @@ set multibuffer
 set nonewlines
 set smarthome
 set tabsize 4
-set nowrap
 set autoindent
 set nohelp
 set historylog
