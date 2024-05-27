@@ -63,4 +63,8 @@ else
 	alias df 'df --si'
 end
 
+if type -q xclip
+	abbr -a -- xcl 'xclip -selection clipboard'
+end
+
 source ~/.config/fish/config.local.fish
