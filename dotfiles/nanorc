@@ -3,7 +3,7 @@ set nonewlines
 set smarthome
 set tabsize 4
 set autoindent
-set nohelp
+#set nohelp
 set historylog
 set positionlog
 set zap

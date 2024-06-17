@@ -22,7 +22,11 @@ if type -q go
 end
 
 set -x DISPLAY :0
-set -x EDITOR micro
+
+if type -q nano
+	ln -sf (which nano) ~/.local/bin/enano
+	set -x EDITOR enano
+end
 
 # set tab width
 if status --is-interactive
