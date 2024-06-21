@@ -46,6 +46,8 @@ set -x NUXT_TELEMETRY_DISABLED 1
 
 set -x NO_COLOR
 
+set -x JISHAKU_NO_DM_TRACEBACK 1
+
 # i don't really use pipenv, so suppress the messages warning that pipenv is being used in a virtualenv
 set -x PIPENV_VERBOSITY -1
 
