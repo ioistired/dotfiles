@@ -11,6 +11,7 @@ set stateflags
 set atblanks
 set minibar
 set indicator
+unset atblanks
 
 unbind ^J main
 
