@@ -8,7 +8,6 @@ set historylog
 set positionlog
 set zap
 set stateflags
-set atblanks
 set minibar
 set indicator
 unset atblanks
