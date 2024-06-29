@@ -47,3 +47,5 @@ ln -sf $dotfiles/x/xcompose ~/.XCompose
 if not test -d $config_home/xinit
 	ln -sf $dotfiles/x $config_home/xinit
 end
+
+ln -sf $dotfiles/sqliterc ~/.sqliterc
