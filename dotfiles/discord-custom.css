@@ -6,6 +6,9 @@ button[aria-label="Open sticker picker"] {
 	display: none;
 }
 
+li[class^=channel]:has(a[href="/shop"]) { display: none; }
+li[class^=channel]:has(a[href="/store"]) { display: none; }
+
 /* disable syntax highlighting, except for comments and diffs */
 [class*="hljs-"] { color: inherit !important; }
 .hljs-comment { color: hsl(18, 80%, 44%) !important; }
