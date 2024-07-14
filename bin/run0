@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+echo '[run0]' "$@" >&2
+/usr/bin/run0 "$@"
+last=$?
+echo '[run0] end' "$@" >&2
+exit $last
