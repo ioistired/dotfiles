@@ -23,17 +23,15 @@ end
 
 set -x DISPLAY :0
 
-if type -q nano
-	ln -sf (which nano) ~/.local/bin/enano
-	set -x EDITOR enano
-end
-
 # set tab width
 if status --is-interactive
 	tabs -4
 end
 
 set -x PAGER less -x 4
+if type -q nano
+	set -x EDITOR nano
+end
 
 set -x PIJUL_CONFIG_DIR ~/.config/pijul
 set -x NVM_DIR ~/.local/share/nvm
