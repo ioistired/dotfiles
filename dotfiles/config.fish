@@ -36,8 +36,7 @@ end
 set -x PIJUL_CONFIG_DIR ~/.config/pijul
 set -x NVM_DIR ~/.local/share/nvm
 
-set -x FFSEND_HOST https://send.lambda.dance
-set -x FFSEND_FORCE
+set -x GEM_HOME ~/.local/lib/gem
 
 set -x DOTNET_CLI_TELEMETRY_OPTOUT 1
 set -x NUXT_TELEMETRY_DISABLED 1
