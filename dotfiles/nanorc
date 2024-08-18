@@ -13,6 +13,7 @@ set indicator
 unset atblanks
 
 unbind ^J main
+bind ^/ comment main
 
 # modern bindings
 bind ^X cut main
