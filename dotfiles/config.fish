@@ -6,6 +6,9 @@ set -x RUSTUP_HOME $HOME/.local/share/rustup
 set -x CARGO_HOME $HOME/.local/share/cargo
 set -x PATH $CARGO_HOME/bin $PATH
 
+set -x DOTNET_ROOT /usr/share/dotnet
+set -x PATH $DOTNET_ROOT $PATH
+
 set -x ASDF_DATA_DIR $HOME/.local/share/asdf
 
 if type -q pyenv
