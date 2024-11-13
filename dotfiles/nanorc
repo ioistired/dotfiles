@@ -9,7 +9,6 @@ set positionlog
 set zap
 set stateflags
 set minibar
-set indicator
 unset atblanks
 
 unbind ^J main
