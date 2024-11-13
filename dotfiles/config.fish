@@ -24,8 +24,6 @@ if type -q go
 	set -x PATH $GOPATH/bin $PATH
 end
 
-set -x DISPLAY :0
-
 # set tab width
 if status --is-interactive
 	tabs -4
