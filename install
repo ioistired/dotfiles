@@ -46,3 +46,4 @@ if not test -d $config_home/xinit
 end
 
 ln -sf $dotfiles/sqliterc ~/.sqliterc
+ln -sf $dotfiles/iex.exs ~/.iex.exs
