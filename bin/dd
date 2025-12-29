@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-exec /usr/bin/dd status=progress "$@"
+exec /bin/dd status=progress "$@"
