@@ -1,6 +1,7 @@
 umask 0027  # u=rwx,g=rx,o=
 
 set -x PATH ~/.local/bin $PATH
+set -x MANPATH ~/.local/share/man $MANPATH
 
 set -x RUSTUP_HOME $HOME/.local/share/rustup
 set -x CARGO_HOME $HOME/.local/share/cargo
