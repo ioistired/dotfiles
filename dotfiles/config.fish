@@ -72,4 +72,8 @@ if type -q xclip
 	abbr -a -- xcl 'xclip -selection clipboard'
 end
 
+if type -q mise
+	mise activate fish | source
+end
+
 source ~/.config/fish/config.local.fish
